@@ -6,3 +6,7 @@ USER_INFO = {
     "email": "TODO@TODO.TODO",
     "fb": "TODO",
 }
+
+USER_URL = "TODO"
+
+TOKEN_KEY = ""
