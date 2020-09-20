@@ -21,7 +21,7 @@ def send_static(filename):
 
 @ route('/links')
 def linktree():
-    token = request.query.get('token')
+    token = request.query.get('at')
     cur_token = get_token()
     print(cur_token)
     if token == cur_token:
