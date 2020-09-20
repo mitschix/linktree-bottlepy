@@ -1,11 +1,13 @@
 #!/usr/bin/env python
 
 # generate token with key + timestamp -> md5
-from datetime import date
-from sys import argv
-import hashlib
-import argparse
 from userdata import TOKEN_KEY, USER_URL
+
+import argparse
+import hashlib
+from sys import argv, path
+from datetime import date
+import os
 
 # init the command line argument parser
 parser = argparse.ArgumentParser()
@@ -41,7 +43,9 @@ def print_url(token):
 
 
 def write_token(token):
-    with open("token_file", 'w') as wf:
+    path_tokfile = os.path.join(path[0], "token_file")
+    print(path_tokfile)
+    with open(path_tokfile, 'w') as wf:
         wf.write(token)
 
 
