@@ -23,7 +23,6 @@ def send_static(filename):
 def linktree():
     token = request.query.get('at')
     cur_token = get_token()
-    print(cur_token)
     if token == cur_token:
         name = USER_INFO.get("name")
         sname = USER_INFO.get("sname")
