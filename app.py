@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+from userdata import USER_INFO
 import os
 
 working_dir = os.path.dirname(os.path.realpath(__file__))
@@ -6,7 +7,6 @@ activate_this = os.path.join(working_dir, "venv_bottle/bin/activate_this.py")
 exec(open(activate_this).read(), {'__file__': activate_this})
 
 from bottle import route, run, template, request, static_file, default_app, redirect
-from userdata import USER_INFO
 
 def get_token():
     with open("token_file", 'r') as rf:
@@ -31,9 +31,13 @@ def linktree():
         ig = USER_INFO.get("ig")
         email = USER_INFO.get("email")
         fb = USER_INFO.get("fb")
+        twitter = USER_INFO.get("twitter")
+        reddit = USER_INFO.get("reddit")
+        youtube = USER_INFO.get("youtube")
 
         return template('linktree', name=name, ig=ig, github=github, email=email,
-                        sname=sname, facebook=fb)
+                        sname=sname, facebook=fb, twitter=twitter, reddit=reddit,
+                        youtube=youtube)
     else:
         redirect('/')
 

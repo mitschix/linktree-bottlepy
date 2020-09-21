@@ -5,6 +5,9 @@ USER_INFO = {
     "ig": "TODO",
     "email": "TODO@TODO.TODO",
     "fb": "TODO",
+    "twitter: "TODO",
+    "reddit: "TODO",
+    "youtube: "TODO",
 }
 
 USER_URL = "TODO"
